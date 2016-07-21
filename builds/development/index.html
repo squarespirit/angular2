@@ -18,8 +18,21 @@
     <script src='js/lib/angular2/Rx.js',></script>
     <!-- Actual angular.js framework -->
     <script src='js/lib/angular2/angular2.dev.js'></script>
+
+    <script>
+      // In system, use default extension of js
+      System.config({
+        packages: {
+          js: { format: 'register', defaultExtension: 'js' }
+        }
+      });
+      // Load boot module using system
+      System.import('js/boot')
+        .then(null, console.error.bind(console));
+    </script>
   </head>
 
 <body>
+  <my-app>Loading...</my-app>
 </body>
 </html>
