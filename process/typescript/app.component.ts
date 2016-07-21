@@ -8,5 +8,10 @@ import {Component} from 'angular2/core';
     templateUrl: 'partials/app.html'
 }) // No semicolon
 export class AppComponent {
+    // Instance variable
+    name: string;
 
+    constructor() {
+        this.name = 'Bob';
+    }    
 }
