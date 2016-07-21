@@ -3,8 +3,8 @@
     <h1>Artist Directory</h1>
     <!-- 1-way bind the element's innerHTML to the value of that string -->
     <label *ngIf="name" [innerHTML]="'Name: ' + name"></label>
-    <!-- newArtist = input DOM element. When enter pressed or Add button clicked, call component.addArtist(newArtist.value) and clear input field -->
-    <input #newArtist (keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
+    <!-- Two-way bind component.name to this input field -->
+    <input #newArtist [(ngModel)]="name" (keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
       <button (click)="addArtist(newArtist.value); newArtist.value=''">Add</button>
   </div>
 </div>
