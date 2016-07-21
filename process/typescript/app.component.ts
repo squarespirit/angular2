@@ -1,11 +1,11 @@
 import {Component} from 'angular2/core';
 
-// Component decorator: 
-// Angular creates a shadow dom element for each component and inserts the 
-// template inside the dom element
+// Component decorator 
+/* Angular replaces the inner html of <my-app> with the specified template 
+ * at the file url */
 @Component({
     selector: 'my-app',
-    template: '<h1>Welcome to my App</h1>'
+    templateUrl: 'partials/app.html'
 }) // No semicolon
 export class AppComponent {
 
