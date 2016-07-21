@@ -26,7 +26,7 @@
           js: { format: 'register', defaultExtension: 'js' }
         }
       });
-      // Load boot module using system
+      // Load boot module, including all modules imported by boot
       System.import('js/boot')
         .then(null, console.error.bind(console));
     </script>
