@@ -1,7 +1,15 @@
 <div class="artistsearch">
   <div class="card search">
     <h1>Artist Directory</h1>
-    <!-- Interpolate: insert value of the component's 'name' property -->
-    <span>name: {{name}}</span>
+    <!-- If 'name' exists and has a value, insert ('interpolate') value of 'name' -->
+    <span *ngIf="name">name: {{name}}</span>
   </div>
 </div>
+
+<ul class="artistlist cf">
+  <!-- Iterate through artists using temp variable 'item' -->
+  <li *ngFor="#item of artists">
+    <h2>{{item.name}}</h2>
+    <p>{{item.school}}</p>
+  </li>
+</ul>    
