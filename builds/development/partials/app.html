@@ -5,7 +5,7 @@
     <label *ngIf="name" [innerHTML]="'Name: ' + name"></label>
     <!-- Two-way bind component.name to this input field -->
     <input #newArtist [(ngModel)]="name" (keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
-      <button (click)="addArtist(newArtist.value); newArtist.value=''">Add</button>
+      <button class="btn" (click)="addArtist(newArtist.value); newArtist.value=''">Add</button>
   </div>
 </div>
 

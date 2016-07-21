@@ -5,7 +5,8 @@ import {Component} from 'angular2/core';
  * at the file url */
 @Component({
     selector: 'my-app',
-    templateUrl: 'partials/app.html'
+    templateUrl: 'partials/app.html',
+    styleUrls: ['css/app.css']
 }) // No semicolon
 export class AppComponent {
     name = 'Ray';
