@@ -1,17 +1,17 @@
 <div class="artistsearch">
   <div class="card search">
     <h1>Artist Directory</h1>
-    <!-- 1-way bind the element's innerHTML to the value of that string -->
-    <label *ngIf="name" [innerHTML]="'Name: ' + name"></label>
-    <!-- Two-way bind component.name to this input field -->
-    <input #newArtist [(ngModel)]="name" (keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
-      <button class="btn" (click)="addArtist(newArtist.value); newArtist.value=''">Add</button>
+    <label>search <span *ngIf="query">for: {{query}}</span></label>
+    <input #newArtist [(ngModel)]="query" placeholder="type in search term"(keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
   </div>
 </div>
 
 <ul class="artistlist cf">
-  <!-- Iterate through component.artists using temp variable 'item'. On click event, call component.onClick with artist name and li item -->
-  <li *ngFor="#item of artists" #artistContainer (click)="onClick(item, artistContainer)">
-    <h2>{{item}}</h2>
+  <li class="artist cf" *ngFor="#item of artists" #artistContainer (click)="onClick(item, artistContainer)">
+    <img src="images/{{item.shortname}}_tn.jpg" alt="{{item.name}} photo">
+    <div class="info">
+      <h2>{{item.name}}</h2>
+      <h3>{{item.reknown}}</h3>
+    </div>
   </li>
 </ul>
