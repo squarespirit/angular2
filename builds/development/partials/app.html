@@ -1,8 +1,11 @@
 <div class="artistsearch">
   <div class="card search">
     <h1>Artist Directory</h1>
-    <!-- If 'name' exists and has a value, insert ('interpolate') value of 'name' -->
-    <span *ngIf="name">name: {{name}}</span>
+    <!-- If component.name exists and has a value, insert ('interpolate') value of component.name -->
+    <label *ngIf="name">name: {{name}}</label>
+    <!-- Input field associated with temp variable 'newArtist'. When enter pressed or Add button clicked, call component.addArtist(newArtist.value) and clear input field -->
+    <input #newArtist (keyup.enter)="addArtist(newArtist.value); newArtist.value=''">
+      <button (click)="addArtist(newArtist.value); newArtist.value=''">Add</button>
   </div>
 </div>
 

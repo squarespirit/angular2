@@ -13,5 +13,9 @@ export class AppComponent {
 
     onClick(myName) {
         this.name = myName;
-    } 
+    }
+
+    addArtist(myArtist) {
+        this.artists.push(myArtist);
+    }
 }
