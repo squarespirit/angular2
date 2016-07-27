@@ -1,4 +1,5 @@
-import {Component} from 'angular2/core';
+import {Component, Input} from 'angular2/core';
+import {Artist} from './artist';
 
 @Component({
   selector: 'artist-item',
@@ -14,8 +15,8 @@ import {Component} from 'angular2/core';
       margin-bottom: 10px;
     }`,
     'h2 { margin-top: 0; }'
-  ],
-  // Input properties for ArtistItemComponent, set by its parent component
-  inputs: ['artist']
+  ]
 })
-export class ArtistItemComponent {}
+export class ArtistItemComponent {
+  @Input() artist: Artist;
+}
