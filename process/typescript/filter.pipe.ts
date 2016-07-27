@@ -9,7 +9,7 @@ export class FilterPipe implements PipeTransform {
     let query: string = args[0];
     return artistList.filter(artist => {
       return artist['name'].toLowerCase().includes(query.toLowerCase()) ||
-          artist['reknown'].toLowerCase().includes(query.toLowerCase());
+          artist['renown'].toLowerCase().includes(query.toLowerCase());
     });
   }
 }
