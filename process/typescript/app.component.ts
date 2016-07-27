@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {ArtistItemComponent} from './artist-item.component';
+import {ArtistDetailsComponent} from './artist-details.component';
 
 interface Artist {
     name: string;
@@ -11,11 +12,16 @@ interface Artist {
 @Component({
     selector: 'my-app',
     templateUrl: 'partials/app.html',
-    directives: [ArtistItemComponent], // Subcomponents used by this component
+    directives: [ArtistItemComponent, ArtistDetailsComponent], // Subcomponents used by this component
     styleUrls: ['css/app.css']
-}) // No semicolon
+})
 export class AppComponent {
     artists = ARTISTS;
+    currentArtist: Artist;
+
+    showArtist(item) {
+        this.currentArtist = item;
+    }
 }
 
 const ARTISTS: Artist[] = [
