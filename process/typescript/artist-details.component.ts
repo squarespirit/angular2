@@ -1,12 +1,5 @@
 import {Component} from 'angular2/core';
-
-// Interface could go in its own file if more than one component uses it
-interface Artist {
-  name: string;
-  shortname: string;
-  reknown: string;
-  bio: string;
-}
+import {Artist} from './artist';
 
 // Component decorator
 @Component({
