@@ -15,6 +15,7 @@ import {Component} from 'angular2/core';
         }`,
         'h2 { margin-top: 0; }'
     ],
+    // Input properties for ArtistItemComponent, set by its parent component
     inputs: ['artist']
 })
 export class ArtistItemComponent {}

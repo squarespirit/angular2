@@ -8,6 +8,7 @@
 
 <ul class="artistlist cf">
   <li class="artist cf" *ngFor="#item of artists" #artistContainer (click)="onClick(item, artistContainer)">
+    <!-- Input value of 'item' to the subcomponent's 'artist' property -->
     <artist-item class="content" [artist]=item></artist-item>
   </li>
 </ul>

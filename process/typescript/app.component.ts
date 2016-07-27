@@ -8,13 +8,10 @@ interface Artist {
     bio: string;
 }
 
-// Component decorator
-/* Angular replaces the inner html of <my-app> with the specified template
- * at the file url */
 @Component({
     selector: 'my-app',
     templateUrl: 'partials/app.html',
-    directives: [ArtistItemComponent],
+    directives: [ArtistItemComponent], // Subcomponents used by this component
     styleUrls: ['css/app.css']
 }) // No semicolon
 export class AppComponent {
