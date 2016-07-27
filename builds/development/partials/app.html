@@ -8,7 +8,7 @@
 
 <!-- Show artist list only if there is a search query -->
 <ul *ngIf="query" class="artistlist cf">
-  <li class="artist cf" *ngFor="#item of artists" (click)="showArtist(item); query='';">
+  <li class="artist cf" *ngFor="#item of (artists | filter:query)" (click)="showArtist(item); query='';">
     <!-- Input value of 'item' to the subcomponent's 'artist' property -->
     <artist-item class="content" [artist]=item></artist-item>
   </li>
