@@ -3,25 +3,25 @@ import {ArtistItemComponent} from './artist-item.component';
 import {ArtistDetailsComponent} from './artist-details.component';
 
 interface Artist {
-    name: string;
-    shortname: string;
-    reknown: string;
-    bio: string;
+  name: string;
+  shortname: string;
+  reknown: string;
+  bio: string;
 }
 
 @Component({
-    selector: 'my-app',
-    templateUrl: 'partials/app.html',
-    directives: [ArtistItemComponent, ArtistDetailsComponent], // Subcomponents used by this component
-    styleUrls: ['css/app.css']
+  selector: 'my-app',
+  templateUrl: 'partials/app.html',
+  directives: [ArtistItemComponent, ArtistDetailsComponent], // Subcomponents used by this component
+  styleUrls: ['css/app.css']
 })
 export class AppComponent {
-    artists = ARTISTS;
-    currentArtist: Artist;
+  artists = ARTISTS;
+  currentArtist: Artist;
 
-    showArtist(item) {
-        this.currentArtist = item;
-    }
+  showArtist(item) {
+    this.currentArtist = item;
+  }
 }
 
 const ARTISTS: Artist[] = [
